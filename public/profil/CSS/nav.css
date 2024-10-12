@@ -1,0 +1,225 @@
+:root {
+  --primary: #2e4121;
+  --secondary: #405630;
+  --font-primary: 'Be Vietnam Pro', sans-serif;
+  --font-secondary: 'Julius Sans One', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  background-color: #E9E9E9;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+/* navbar start */
+.navbar1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar1 .navbar-logo {
+  height: 50px;
+}
+.navbar1 .navbar1-nav a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navbar1 .navbar1-nav a:hover {
+  color: #976230;
+}
+.navbar1 .navbar1-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: background-color 0.3s, color 0.3s;
+}
+.navbar1 .navbar1-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar1 .navbar1-extra a {
+  color: #000;
+  margin: 0 0.5rem;
+}
+.navbar1 .navbar1-extra a:hover {
+  color: var(--primary);
+}
+#hamburger-menu {
+  display: none;
+}
+/* navbar end */
+
+/* footer start */
+footer {
+  background-color: var(--secondary);
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  text-align: center;
+}
+.footer-logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+.footer-center h3 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-center p {
+  margin: 0;
+}
+.footer-right .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-right .social-icons a {
+  margin: 0 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.footer-right .social-icons a i {
+  margin-right: 0.5rem;
+}
+.footer-right .social-icons a:hover {
+  color: var(--primary);
+}
+/* footer end */
+
+/* media quaries */
+@media (max-width: 1366px) {
+  html {
+      font-size: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+      font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+      display: inline-block;
+  }
+
+  .navbar1 .navbar1-nav {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      background-color: #fff;
+      width: 30rem;
+      height: 100vh;
+  }
+
+  .navbar1 .navbar1-nav.active {
+      right: 0;
+      transition: 0.3s;
+  }
+
+  .navbar1 .navbar1-nav a {
+      color: var(--primary);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+  }
+
+  .navbar1 .navbar1-nav a::after {
+      transform-origin: 0 0;
+  }
+
+  .navbar1 .navbar1-nav a:hover::after {
+      transform: scaleX(0.2);
+  }
+}
+
+/* General styles for the menu */
+.menu-hidden {
+  display: none;
+}
+.menu-visible {
+  display: block;
+}
+/* Basic styles for the menu */
+#menu {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+#menu ul li {
+  margin: 10px 0;
+}
+#menu ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.navbar1-extra {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+.navbar1-extra a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+}

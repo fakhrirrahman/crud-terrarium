@@ -1,0 +1,391 @@
+:root {
+  --primary: #2e4121;
+  --secondary: #405630;
+  --font-primary: 'Be Vietnam Pro', sans-serif;
+  --font-secondary: 'Julius Sans One', sans-serif;
+}
+
+* {
+  margin: 0;
+  /* padding: 0; */
+  /* box-sizing: border-box; */
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  background-color: #E9E9E9;
+  color: #000;
+  /* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #ffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  height: 50px;
+}
+.navbar .navbar-nav a {
+  color: #000;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: #976230;
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var (var(--bg));
+  transform: scaleX(0);
+  transition: background-color 0.3s, color 0.3s;
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar .navbar-extra a {
+  color: #000;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+#hamburger-menu {
+  display: none;
+}
+/* Navbar end */
+
+/* produk start */
+.product {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-display {
+  padding: 50px 20px;
+  display: flex;
+  margin-top: 20px;
+  position: relative; 
+  min-height: 500px; 
+}
+
+.main-image {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: fit-content; 
+  z-index: 1;
+  margin-right: 40px;
+}
+
+.main-image img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.thumbnails img:hover {
+  border-color: #333;
+}
+
+.product-details {
+  max-width: 700px;
+  flex: 1;
+}
+
+.product-details h2 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.product-details p {
+  margin: 0.5rem 0;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.options button {
+  flex: 1;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background-color: #eee;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 50px;
+  text-align: center;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: darkgreen;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+.description label {
+  display: block;
+  margin-bottom: 5px;
+}
+.description p {
+  margin-bottom: 10px;
+  /* font-size: 12px; */
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary); 
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  text-align: center;
+}
+.footer-logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+.footer-center h3 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.footer-center p {
+  margin: 0;
+}
+.footer-right .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-right .social-icons a {
+  margin: 0 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.footer-right .social-icons a i {
+  margin-right: 0.5rem;
+}
+.footer-right .social-icons a:hover {
+  color: var(--bg);
+}
+/* Footer end*/
+
+
+/* Media Queries */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet Landscape & Portrait */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .product {
+      padding: 50px 5%; 
+  }
+  .product-display {
+      flex-direction: column; 
+  }
+  .main-image {
+      position: static; 
+      margin-right: 0; 
+      margin-bottom: 20px; 
+  }
+  .main-image img {
+      width: 100%; 
+      max-width: none; 
+      height: auto; 
+  }
+  .thumbnails {
+      gap: 10px; 
+  }
+  .thumbnails img {
+      width: 60px;
+      height: auto;
+  }
+  .product-details {
+      max-width: 100%; 
+  }
+}
+
+/* Mobile Landscape & Portrait */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .product {
+      padding: 30px 5%; 
+  }
+  .main-image {
+      margin-bottom: 20px; 
+  }
+  .thumbnails {
+      gap: 5px; 
+  }
+  .thumbnails img {
+      width: 50px; 
+      height: auto; 
+  }
+  .product-details {
+      max-width: 100%; 
+  }
+}
+
+/* General styles for the menu */
+.menu-hidden {
+  display: none;
+} 
+.menu-visible {
+  display: block;
+} 
+/* Basic styles for the menu */
+#menu {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+} 
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+} 
+#menu ul li {
+  margin: 10px 0;
+} 
+#menu ul li a {
+  text-decoration: none;
+  color: #000;
+} 
+.navbar-extra {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+} 
+.navbar-extra a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #000;
+}
